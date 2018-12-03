@@ -102,7 +102,7 @@ class ORT:
             lossL = 0 if nL==0 else statsL.impurity()
             lossR = 0 if nR==0 else statsR.impurity()
             g = elem.stats.impurity() - (nL/n) * lossL - (nR/n)  * lossR
-            return 0 if g < 0 else g
+            return 0 if np.all(g < 0) else g
         return map(gain, tests)
 
     def __findLeaf(self, x, tree, depth=0):
