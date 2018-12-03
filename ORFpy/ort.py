@@ -73,7 +73,7 @@ class ORT:
                 #if j.elem.numSamplesSeen > self.minSamples and depth < self.maxDepth: # FIXME: which is the correct approach?
                 if j.elem.stats.n > self.minSamples and depth < self.maxDepth:
                     g = self.__gains(j.elem)
-                    if any([ gg >= self.minGain for gg in g ]):
+                    if np.any([ gg >= self.minGain for gg in g ]):
                         bestTest = j.elem.tests[argmax(g)]
                         j.elem.updateSplit(bestTest.dim,bestTest.loc)
                         j.updateChildren( Tree(Elem(self.param)), Tree(Elem(self.param)) )
