@@ -1,4 +1,4 @@
-from math import log
+from numpy import log
 
 def dataRange(X):
     """
