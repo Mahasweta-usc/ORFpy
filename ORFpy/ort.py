@@ -1,4 +1,5 @@
 from tree import Tree
+import numpy as np
 from numpy import e, sqrt, exp
 from utils import argmax, log2
 import random
