@@ -1,5 +1,5 @@
 from ort import ORT
-from math import sqrt
+from numpy import sqrt
 from utils import argmax
 
 class ORF:
