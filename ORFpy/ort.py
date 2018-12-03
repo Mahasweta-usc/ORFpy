@@ -1,5 +1,5 @@
 from tree import Tree
-from math import e, sqrt, exp
+from numpy import e, sqrt, exp
 from utils import argmax, log2
 import random
 
